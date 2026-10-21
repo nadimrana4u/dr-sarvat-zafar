@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dr. Sarvat Zafar — Academic Profile</title>
+<meta name="description" content="Academic profile of Dr. Sarvat Zafar — publications, research profiles, CV, and media." />
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="navbar" aria-label="Primary">
+    <a class="brand" href="#top">Dr. Sarvat Zafar</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#profiles">Profiles</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section id="top" class="hero">
+    <div class="hero-inner">
+      <img class="hero-photo" id="heroPhoto" src="assets/img/profile-photo.jpg" alt="Portrait of Dr. Sarvat Zafar" onerror="this.src='assets/img/placeholder-photo.svg'" />
+      <div class="hero-text">
+        <h1 id="heroName">Dr. Sarvat Zafar</h1>
+        <p class="hero-title" id="heroTitle">Assistant Professor</p>
+        <p class="hero-institution" id="heroInstitution">Institution</p>
+        <p class="hero-tagline" id="heroTagline"></p>
+        <p class="hero-verified-email" id="heroVerifiedEmail" hidden></p>
+        <div class="hero-tags" id="heroTags"></div>
+        <div class="hero-actions">
+          <a href="#cv" class="btn btn-primary">Download CV</a>
+          <a href="#contact" class="btn btn-ghost">Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About</h2>
+    <div class="bio" id="bioText"></div>
+  </section>
+
+  <!-- RESEARCH PROFILES -->
+  <section id="profiles" class="section section-alt">
+    <h2>Research &amp; Academic Profiles</h2>
+    <p class="section-lede">Verified profiles on major indexing and academic networking platforms.</p>
+    <div class="profiles-layout">
+      <div class="badge-grid" id="profileBadges"></div>
+
+      <!-- Google Scholar citation metrics widget (auto-hidden if not configured) -->
+      <div class="scholar-card" id="scholarCard" hidden>
+        <div class="scholar-card-head">
+          <h3>Cited by</h3>
+          <a id="scholarViewAll" href="#" target="_blank" rel="noopener" class="scholar-view-all">VIEW ALL</a>
+        </div>
+        <table class="scholar-table">
+          <thead>
+            <tr><th></th><th>All</th><th id="scholarSinceLabel">Since</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Citations</td><td id="scholarCitationsAll"></td><td id="scholarCitationsSince"></td></tr>
+            <tr><td>h-index</td><td id="scholarHIndexAll"></td><td id="scholarHIndexSince"></td></tr>
+            <tr><td>i10-index</td><td id="scholarI10All"></td><td id="scholarI10Since"></td></tr>
+          </tbody>
+        </table>
+        <div class="scholar-chart" id="scholarChart"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications" class="section">
+    <h2>Publications</h2>
+
+    <h3>Selected Publications</h3>
+    <ul class="pub-list" id="pubListManual"></ul>
+
+    <div class="pub-panel" id="pubPanelOrcid" hidden>
+      <h3>From ORCID</h3>
+      <div id="pubOrcidStatus" class="pub-status"></div>
+      <ul class="pub-list" id="pubListOrcid"></ul>
+    </div>
+
+    <div class="pub-panel" id="pubPanelDblp" hidden>
+      <h3>From DBLP</h3>
+      <div id="pubDblpStatus" class="pub-status"></div>
+      <ul class="pub-list" id="pubListDblp"></ul>
+    </div>
+  </section>
+
+  <!-- MEDIA -->
+  <section id="media" class="section section-alt">
+    <h2>Media</h2>
+
+    <div class="media-block">
+      <h3>YouTube</h3>
+      <div class="video-grid" id="youtubeGrid"></div>
+      <p class="empty-note" id="youtubeEmpty" hidden>No videos configured yet — add YouTube video IDs in <code>js/config.js</code>.</p>
+    </div>
+
+    <div class="media-block">
+      <h3>Instagram</h3>
+      <div class="video-grid instagram-grid" id="instagramGrid"></div>
+    </div>
+  </section>
+
+  <!-- CV -->
+  <section id="cv" class="section">
+    <h2>Curriculum Vitae</h2>
+    <p class="section-lede">Full academic CV including education, positions, publications, grants, and awards.</p>
+    <a id="cvDownloadBtn" class="btn btn-primary" href="assets/cv/Dr_Sarvat_Zafar_CV.pdf" download>Download Full CV (PDF)</a>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt">
+    <h2>Contact</h2>
+    <p id="contactEmail" class="contact-email"></p>
+    <div class="social-row" id="socialRow"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> <span id="footerName">Dr. Sarvat Zafar</span>. All rights reserved.</p>
+</footer>
+
+<!-- Instagram embed script (loaded lazily only if posts are configured) -->
+<script async src="https://www.instagram.com/embed.js" id="instagramEmbedScript"></script>
+
+<script src="js/config.js"></script>
+<script src="js/publications.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
